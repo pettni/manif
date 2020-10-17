@@ -76,6 +76,9 @@ add_subdirectory(se2)
 # SE3 tests
 add_subdirectory(se3)
 
+# Composite tests
+add_subdirectory(composite)
+
 find_package(Ceres QUIET)
 
 if(CERES_FOUND)
