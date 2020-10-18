@@ -9,6 +9,8 @@ manif_add_gtest(gtest_so3_ceres gtest_so3_ceres.cpp)
 
 manif_add_gtest(gtest_se3_ceres gtest_se3_ceres.cpp)
 
+manif_add_gtest(gtest_composite_ceres gtest_composite_ceres.cpp)
+
 set(CXX_11_TEST_TARGETS_CERES
   # SO2
   gtest_so2_ceres
@@ -22,6 +24,9 @@ set(CXX_11_TEST_TARGETS_CERES
 
   # SE3
   gtest_se3_ceres
+
+  # Composite
+  gtest_composite_ceres
 )
 
 foreach(target ${CXX_11_TEST_TARGETS_CERES})

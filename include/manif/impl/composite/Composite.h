@@ -173,6 +173,6 @@ Composite<_Scalar, _T...>::coeffs() const
   return data_;
 }
 
-} // namespace manif
+}  // namespace manif
 
-#endif // _MANIF_MANIF_COMPOSITE_H_
+#endif  // _MANIF_MANIF_COMPOSITE_H_

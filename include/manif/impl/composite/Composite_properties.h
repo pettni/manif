@@ -33,7 +33,10 @@ struct intseq
 
 // join two intseqs
 template<typename _Seq1, typename _Seq2>
-struct intseq_join;
+struct intseq_join
+{
+  using type = std::false_type;
+};
 
 template<typename _Int, template<typename, _Int ...> class _IntSeq, _Int ... _I1, _Int ... _I2>
 struct intseq_join<_IntSeq<_Int, _I1...>, _IntSeq<_Int, _I2...>>
@@ -47,7 +50,11 @@ using intseq_join_t = typename intseq_join<_Seq1, _Seq2>::type;
 
 // create intseq of given length
 template<typename _Int, size_t _N>
-struct make_intseq;
+struct make_intseq
+{
+  using type =
+    typename intseq_join<typename make_intseq<_Int, _N - 1>::type, intseq<_Int, _N - 1>>::type;
+};
 
 template<typename _Int>
 struct make_intseq<_Int, 0>
@@ -56,19 +63,15 @@ struct make_intseq<_Int, 0>
 };
 
 template<typename _Int, size_t _N>
-struct make_intseq
-{
-  using type =
-    typename intseq_join<typename make_intseq<_Int, _N - 1>::type, intseq<_Int, _N - 1>>::type;
-};
-
-template<typename _Int, size_t _N>
 using make_intseq_t = typename make_intseq<_Int, _N>::type;
 
 
 // extract element from integer sequence
 template<size_t _Idx, typename _Seq>
-struct intseq_element;
+struct intseq_element
+{
+  static constexpr typename _Seq::value_type value = 0;
+};
 
 template<typename _Int, template<typename, _Int ...> class _IntSeq, _Int _I, _Int ... _Is>
 struct intseq_element<0, _IntSeq<_Int, _I, _Is...>>
@@ -79,9 +82,7 @@ struct intseq_element<0, _IntSeq<_Int, _I, _Is...>>
 template<
   typename _Int,
   template<typename, _Int ...> class _IntSeq,
-  _Int _I,
-  _Int ... _Is,
-  size_t _Idx>
+  _Int _I, _Int ... _Is, size_t _Idx>
 struct intseq_element<_Idx, _IntSeq<_Int, _I, _Is...>>
 {
   static constexpr _Int value = intseq_element<_Idx - 1, _IntSeq<_Int, _Is...>>::value;
@@ -94,7 +95,10 @@ struct intseq_element<_Idx, _IntSeq<_Int, _I, _Is...>>
 
 // sum an integer sequence
 template<typename _Seq>
-struct intseq_sum;
+struct intseq_sum
+{
+  static constexpr typename _Seq::value_type value = 0;
+};
 
 template<typename _Int, template<typename, _Int ...> class _IntSeq>
 struct intseq_sum<_IntSeq<_Int>>
@@ -115,7 +119,10 @@ struct intseq_sum<_IntSeq<_Int, I, Is...>>
 
 // prefix-sum an integer sequence
 template<typename _Int, typename _Collected, typename _Remaining, _Int Sum>
-struct intseq_psum_impl;
+struct intseq_psum_impl
+{
+  using type = std::false_type;
+};
 
 template<
   typename _Int,
@@ -134,7 +141,10 @@ struct intseq_psum_impl<_Int, _IntSeq<_Int, _Cur...>, _IntSeq<_Int, _First, _Rem
 {};
 
 template<class _Seq>
-struct intseq_psum;
+struct intseq_psum
+{
+  using type = std::false_type;
+};
 
 template<typename _Int, template<typename, _Int ...> class _IntSeq, _Int ... _I>
 struct intseq_psum<_IntSeq<_Int, _I...>>
