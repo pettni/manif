@@ -12,7 +12,7 @@ namespace internal
 {
 
 //! Traits specialization
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 struct traits<Composite<_Scalar, _T ...>>
 {
   // Composite-specific traits
@@ -62,7 +62,7 @@ struct traits<Composite<_Scalar, _T ...>>
 /**
  * @brief Represents a composite element.
  */
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 struct Composite : CompositeBase<Composite<_Scalar, _T ...>>
 {
 private:
@@ -120,35 +120,35 @@ protected:
 
 MANIF_EXTRA_GROUP_TYPEDEF(Composite)
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 Composite<_Scalar, _T...>::Composite(const Base & o)
 : Composite(o.coeffs())
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<typename _DerivedOther>
 Composite<_Scalar, _T...>::Composite(const CompositeBase<_DerivedOther> & o)
 : Composite(o.coeffs())
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<typename _DerivedOther>
 Composite<_Scalar, _T...>::Composite(const LieGroupBase<_DerivedOther> & o)
 : Composite(o.coeffs())
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<typename _EigenDerived>
 Composite<_Scalar, _T...>::Composite(const Eigen::MatrixBase<_EigenDerived> & data)
 : data_(data)
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 Composite<_Scalar, _T...>::Composite(_T<_Scalar> && ... parts)
 : Composite(BegRep{}, LenRep{}, std::forward<_T<_Scalar>>(parts) ...)
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<int ... _BegRep, int ... _LenRep>
 Composite<_Scalar, _T...>::Composite(
   m_intseq<_BegRep...>, m_intseq<_LenRep...>, _T<_Scalar> && ... parts)
@@ -159,14 +159,14 @@ Composite<_Scalar, _T...>::Composite(
   static_cast<void>(l);  // compiler warning
 }
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 typename Composite<_Scalar, _T...>::DataType &
 Composite<_Scalar, _T...>::coeffs()
 {
   return data_;
 }
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 const typename Composite<_Scalar, _T...>::DataType &
 Composite<_Scalar, _T...>::coeffs() const
 {

@@ -9,6 +9,8 @@
 
 #include <Eigen/StdVector>
 
+#include <array>
+
 using namespace manif;
 
 using GroupT = Composite<double, R2, SO3, R1>;
@@ -16,63 +18,68 @@ using TangentT = CompositeTangent<double, R2, SO3, R1>;
 
 TEST(Composite, Static)
 {
-  static_assert(internal::traits<GroupT>::Dim == 6);
-  static_assert(internal::traits<GroupT>::DoF == 6);
-  static_assert(internal::traits<GroupT>::RepSize == 7);
+  static_assert(internal::traits<GroupT>::Dim == 6, "Dimension error");
+  static_assert(internal::traits<GroupT>::DoF == 6, "Dimension error");
+  static_assert(internal::traits<GroupT>::RepSize == 7, "Dimension error");
 
-  static_assert(GroupT::DoF == R2d::DoF + SO3d::DoF + R1d::DoF);
-  static_assert(GroupT::RepSize == R2d::RepSize + SO3d::RepSize + R1d::RepSize);
-  static_assert(GroupT::Dim == R2d::Dim + SO3d::Dim + R1d::Dim);
+  static_assert(GroupT::DoF == R2d::DoF + SO3d::DoF + R1d::DoF, "Dimension error");
+  static_assert(GroupT::RepSize == R2d::RepSize + SO3d::RepSize + R1d::RepSize, "Dimension error");
+  static_assert(GroupT::Dim == R2d::Dim + SO3d::Dim + R1d::Dim, "Dimension error");
 
   static_assert(
     GroupT::Vector::RowsAtCompileTime ==
     R2d::Vector::RowsAtCompileTime + SO3d::Vector::RowsAtCompileTime +
-    R1d::Vector::RowsAtCompileTime);
+    R1d::Vector::RowsAtCompileTime, "Dimension error");
 
   static_assert(
     GroupT::Transformation::RowsAtCompileTime ==
     R2d::Transformation::RowsAtCompileTime + SO3d::Transformation::RowsAtCompileTime +
-    R1d::Transformation::RowsAtCompileTime);
+    R1d::Transformation::RowsAtCompileTime, "Dimension error");
 
   static_assert(
     GroupT::Transformation::ColsAtCompileTime ==
     R2d::Transformation::ColsAtCompileTime + SO3d::Transformation::ColsAtCompileTime +
-    R1d::Transformation::ColsAtCompileTime);
+    R1d::Transformation::ColsAtCompileTime, "Dimension error");
 
-  static_assert(GroupT::Tangent::Dim == R2d::Tangent::Dim + SO3d::Tangent::Dim + R1d::Tangent::Dim);
-  static_assert(GroupT::Tangent::DoF == R2d::Tangent::DoF + SO3d::Tangent::DoF + R1d::Tangent::DoF);
-  static_assert(GroupT::Tangent::RepSize
-    == R2d::Tangent::RepSize + SO3d::Tangent::RepSize + R1d::Tangent::RepSize);
+  static_assert(
+    GroupT::Tangent::Dim == R2d::Tangent::Dim + SO3d::Tangent::Dim + R1d::Tangent::Dim,
+    "Dimension error");
+  static_assert(
+    GroupT::Tangent::DoF == R2d::Tangent::DoF + SO3d::Tangent::DoF + R1d::Tangent::DoF,
+    "Dimension error");
+  static_assert(
+    GroupT::Tangent::RepSize ==
+    R2d::Tangent::RepSize + SO3d::Tangent::RepSize + R1d::Tangent::RepSize, "Dimension error");
 
   static_assert(
     GroupT::Tangent::LieAlg::RowsAtCompileTime ==
     R2d::Tangent::LieAlg::RowsAtCompileTime + SO3d::Tangent::LieAlg::RowsAtCompileTime +
-    R1d::Tangent::LieAlg::RowsAtCompileTime);
+    R1d::Tangent::LieAlg::RowsAtCompileTime, "Dimension error");
 
   static_assert(
     GroupT::Tangent::LieAlg::ColsAtCompileTime ==
     R2d::Tangent::LieAlg::ColsAtCompileTime + SO3d::Tangent::LieAlg::ColsAtCompileTime +
-    R1d::Tangent::LieAlg::ColsAtCompileTime);
+    R1d::Tangent::LieAlg::ColsAtCompileTime, "Dimension error");
 
   static_assert(
     GroupT::Jacobian::RowsAtCompileTime ==
     R2d::Jacobian::RowsAtCompileTime + SO3d::Jacobian::RowsAtCompileTime +
-    R1d::Jacobian::RowsAtCompileTime);
+    R1d::Jacobian::RowsAtCompileTime, "Dimension error");
 
   static_assert(
     GroupT::Jacobian::ColsAtCompileTime ==
     R2d::Jacobian::ColsAtCompileTime + SO3d::Jacobian::ColsAtCompileTime +
-    R1d::Jacobian::ColsAtCompileTime);
+    R1d::Jacobian::ColsAtCompileTime, "Dimension error");
 
   static_assert(
     GroupT::Tangent::Jacobian::RowsAtCompileTime ==
     R2d::Tangent::Jacobian::RowsAtCompileTime + SO3d::Tangent::Jacobian::RowsAtCompileTime +
-    R1d::Tangent::Jacobian::RowsAtCompileTime);
+    R1d::Tangent::Jacobian::RowsAtCompileTime, "Dimension error");
 
   static_assert(
     GroupT::Tangent::Jacobian::ColsAtCompileTime ==
     R2d::Tangent::Jacobian::ColsAtCompileTime + SO3d::Tangent::Jacobian::ColsAtCompileTime +
-    R1d::Tangent::Jacobian::ColsAtCompileTime);
+    R1d::Tangent::Jacobian::ColsAtCompileTime, "Dimension error");
 }
 
 
@@ -127,7 +134,9 @@ TEST(CompositeTangent, Interface)
 
   tangent.get<0>() = Eigen::Vector2d{1, 2};
   tangent.get<1>() = Eigen::Vector3d{3, 4, 5};
-  tangent.get<2>() = Eigen::Matrix<double, 1, 1>{6};
+  Eigen::Matrix<double, 1, 1> x;
+  x << 6;
+  tangent.get<2>() = x;
 
   auto exp = tangent.exp();
 

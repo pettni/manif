@@ -3,11 +3,13 @@
 
 #include "manif/impl/composite/Composite.h"
 
-namespace manif::internal
+namespace manif
+{
+namespace internal
 {
 
 //! @brief traits specialization for Eigen Map
-template<typename _Scalar, template<typename> typename ... T>
+template<typename _Scalar, template<typename> class ... T>
 struct traits<Eigen::Map<Composite<_Scalar, T...>, 0>>
   : public traits<Composite<_Scalar, T...>>
 {
@@ -18,7 +20,7 @@ struct traits<Eigen::Map<Composite<_Scalar, T...>, 0>>
 };
 
 //! @brief traits specialization for Eigen Map const
-template<typename _Scalar, template<typename> typename ... T>
+template<typename _Scalar, template<typename> class ... T>
 struct traits<Eigen::Map<const Composite<_Scalar, T...>, 0>>
   : public traits<const Composite<_Scalar, T...>>
 {
@@ -28,7 +30,8 @@ struct traits<Eigen::Map<const Composite<_Scalar, T...>, 0>>
   using DataType = Eigen::Map<const Eigen::Matrix<Scalar, RepSize, 1>, 0>;
 };
 
-}  // namespace manif::internal
+}  // namespace internal
+}  // namespace manif
 
 
 namespace Eigen
@@ -37,7 +40,7 @@ namespace Eigen
 /**
  * @brief Specialization of Map for manif::Composite
  */
-template<class _Scalar, template<typename> typename ... T>
+template<class _Scalar, template<typename> class ... T>
 class Map<manif::Composite<_Scalar, T...>, 0>
   : public manif::CompositeBase<Map<manif::Composite<_Scalar, T...>, 0>>
 {
@@ -61,7 +64,7 @@ protected:
 /**
  * @brief Specialization of Map for const manif::Composite
  */
-template<class _Scalar, template<typename> typename ... T>
+template<class _Scalar, template<typename> class ... T>
 class Map<const manif::Composite<_Scalar, T...>, 0>
   : public manif::CompositeBase<Map<const manif::Composite<_Scalar, T...>, 0>>
 {

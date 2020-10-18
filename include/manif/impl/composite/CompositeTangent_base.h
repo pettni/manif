@@ -160,6 +160,9 @@ template<typename _Derived>
 typename CompositeTangentBase<_Derived>::LieGroup
 CompositeTangentBase<_Derived>::exp(OptJacobianRef J_m_t) const
 {
+  if (J_m_t) {
+    J_m_t->setZero();
+  }
   return exp_impl(J_m_t, IdxList{}, BegDoF{}, LenDoF{});
 }
 

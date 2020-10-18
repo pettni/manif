@@ -3,8 +3,6 @@
 
 #include "manif/impl/traits.h"
 
-#include <utility>
-
 namespace manif
 {
 
@@ -14,13 +12,15 @@ struct CompositeBase;
 template<typename _Derived>
 struct CompositeTangentBase;
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 struct Composite;
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 struct CompositeTangent;
 
 
-namespace internal::composite
+namespace internal
+{
+namespace composite
 {
 
 // std::integer_sequence-equivalent
@@ -35,7 +35,7 @@ struct intseq
 template<typename _Seq1, typename _Seq2>
 struct intseq_join;
 
-template<typename _Int, template<typename, _Int...> typename _IntSeq, _Int ... _I1, _Int ... _I2>
+template<typename _Int, template<typename, _Int ...> class _IntSeq, _Int ... _I1, _Int ... _I2>
 struct intseq_join<_IntSeq<_Int, _I1...>, _IntSeq<_Int, _I2...>>
 {
   using type = _IntSeq<_Int, _I1..., _I2...>;
@@ -70,7 +70,7 @@ using make_intseq_t = typename make_intseq<_Int, _N>::type;
 template<size_t _Idx, typename _Seq>
 struct intseq_element;
 
-template<typename _Int, template<typename, _Int ...> typename _IntSeq, _Int _I, _Int ... _Is>
+template<typename _Int, template<typename, _Int ...> class _IntSeq, _Int _I, _Int ... _Is>
 struct intseq_element<0, _IntSeq<_Int, _I, _Is...>>
 {
   static constexpr _Int value = _I;
@@ -78,7 +78,7 @@ struct intseq_element<0, _IntSeq<_Int, _I, _Is...>>
 
 template<
   typename _Int,
-  template<typename, _Int ...> typename _IntSeq,
+  template<typename, _Int ...> class _IntSeq,
   _Int _I,
   _Int ... _Is,
   size_t _Idx>
@@ -96,13 +96,13 @@ struct intseq_element<_Idx, _IntSeq<_Int, _I, _Is...>>
 template<typename _Seq>
 struct intseq_sum;
 
-template<typename _Int, template<typename, _Int ...> typename _IntSeq>
+template<typename _Int, template<typename, _Int ...> class _IntSeq>
 struct intseq_sum<_IntSeq<_Int>>
 {
   static constexpr _Int value = 0;
 };
 
-template<typename _Int, template<typename, _Int ...> typename _IntSeq, _Int I, _Int ... Is>
+template<typename _Int, template<typename, _Int ...> class _IntSeq, _Int I, _Int ... Is>
 struct intseq_sum<_IntSeq<_Int, I, Is...>>
 {
   static constexpr _Int value = I + intseq_sum<_IntSeq<_Int, Is...>>::value;
@@ -119,7 +119,7 @@ struct intseq_psum_impl;
 
 template<
   typename _Int,
-  template<typename, _Int ...> typename _IntSeq,
+  template<typename, _Int ...> class _IntSeq,
   _Int... _Cur,
   _Int _Sum>
 struct intseq_psum_impl<_Int, _IntSeq<_Int, _Cur...>, _IntSeq<_Int>, _Sum>
@@ -127,7 +127,7 @@ struct intseq_psum_impl<_Int, _IntSeq<_Int, _Cur...>, _IntSeq<_Int>, _Sum>
   using type = _IntSeq<_Int, _Cur...>;
 };
 
-template<typename _Int, template<typename, _Int ...> typename _IntSeq,
+template<typename _Int, template<typename, _Int ...> class _IntSeq,
   _Int... _Cur, _Int _First, _Int... _Rem, _Int _Sum>
 struct intseq_psum_impl<_Int, _IntSeq<_Int, _Cur...>, _IntSeq<_Int, _First, _Rem...>, _Sum>
   : intseq_psum_impl<_Int, _IntSeq<_Int, _Cur..., _Sum>, _IntSeq<_Int, _Rem...>, _Sum + _First>
@@ -136,7 +136,7 @@ struct intseq_psum_impl<_Int, _IntSeq<_Int, _Cur...>, _IntSeq<_Int, _First, _Rem
 template<class _Seq>
 struct intseq_psum;
 
-template<typename _Int, template<typename, _Int ...> typename _IntSeq, _Int ... _I>
+template<typename _Int, template<typename, _Int ...> class _IntSeq, _Int ... _I>
 struct intseq_psum<_IntSeq<_Int, _I...>>
 {
   using type = typename intseq_psum_impl<_Int, _IntSeq<_Int>, _IntSeq<_Int, _I...>, 0>::type;
@@ -145,7 +145,8 @@ struct intseq_psum<_IntSeq<_Int, _I...>>
 template<class _Seq>
 using intseq_psum_t = typename intseq_psum<_Seq>::type;
 
-}  // namespace internal::composite
+}  // namespace composite
+}  // namespace internal
 
 
 // SELECT INTEGER SEQUENCE TYPE

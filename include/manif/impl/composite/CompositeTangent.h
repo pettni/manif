@@ -12,7 +12,7 @@ namespace internal
 {
 
 //! Traits specialization
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 struct traits<CompositeTangent<_Scalar, _T...>>
 {
   // Composite-specific traits
@@ -62,7 +62,7 @@ struct traits<CompositeTangent<_Scalar, _T...>>
 /**
  * @brief Represents an element of the tangent space
  */
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 struct CompositeTangent : CompositeTangentBase<CompositeTangent<_Scalar, _T...>>
 {
 private:
@@ -122,35 +122,35 @@ protected:
 
 MANIF_EXTRA_GROUP_TYPEDEF(CompositeTangent)
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 CompositeTangent<_Scalar, _T...>::CompositeTangent(const Base & o)
 : data_(o.coeffs())
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<typename _DerivedOther>
 CompositeTangent<_Scalar, _T...>::CompositeTangent(const CompositeTangentBase<_DerivedOther> & o)
 : data_(o.coeffs())
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<typename _DerivedOther>
 CompositeTangent<_Scalar, _T...>::CompositeTangent(const TangentBase<_DerivedOther> & o)
 : data_(o.coeffs())
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<typename _EigenDerived>
 CompositeTangent<_Scalar, _T...>::CompositeTangent(const Eigen::MatrixBase<_EigenDerived> & data)
 : data_(data)
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 CompositeTangent<_Scalar, _T...>::CompositeTangent(typename _T<_Scalar>::Tangent && ... parts)
 : CompositeTangent(BegRep{}, LenRep{}, std::forward<typename _T<_Scalar>::Tangent>(parts) ...)
 {}
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 template<int ... _BegRep, int ... _LenRep>
 CompositeTangent<_Scalar, _T...>::CompositeTangent(
   m_intseq<_BegRep...>, m_intseq<_LenRep...>,
@@ -162,14 +162,14 @@ CompositeTangent<_Scalar, _T...>::CompositeTangent(
   static_cast<void>(l);  // compiler warning
 }
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 typename CompositeTangent<_Scalar, _T...>::DataType &
 CompositeTangent<_Scalar, _T...>::coeffs()
 {
   return data_;
 }
 
-template<typename _Scalar, template<typename> typename ... _T>
+template<typename _Scalar, template<typename> class ... _T>
 const typename CompositeTangent<_Scalar, _T...>::DataType &
 CompositeTangent<_Scalar, _T...>::coeffs() const
 {

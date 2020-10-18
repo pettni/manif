@@ -43,10 +43,10 @@ struct traitscast;
  * using FooFloat = typename traitscast<FooDouble, float>::cast;
  */
 template <
-  template <typename, template<typename> typename...> typename _Class,
+  template <typename, template<typename> class...> class _Class,
   typename _Scalar,
   typename _NewScalar,
-  template<typename> typename ... Ts>
+  template<typename> class ... Ts>
 struct traitscast<_Class<_Scalar, Ts...>, _NewScalar>
 {
   using cast = _Class<_NewScalar, Ts...>;
