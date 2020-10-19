@@ -16,18 +16,18 @@ template<typename _Scalar, template<typename> class ... _T>
 struct traits<Composite<_Scalar, _T ...>>
 {
   // Composite-specific traits
-  using IdxList = m_make_intseq<sizeof...(_T)>;
+  using IdxList = make_intseq_t<sizeof...(_T)>;
 
-  using LenDim = m_intseq<_T<_Scalar>::Dim ...>;
+  using LenDim = intseq<_T<_Scalar>::Dim ...>;
   using BegDim = composite::intseq_psum_t<LenDim>;
 
-  using LenDoF = m_intseq<_T<_Scalar>::DoF ...>;
+  using LenDoF = intseq<_T<_Scalar>::DoF ...>;
   using BegDoF = composite::intseq_psum_t<LenDoF>;
 
-  using LenTra = m_intseq<_T<_Scalar>::Transformation::RowsAtCompileTime ...>;
+  using LenTra = intseq<_T<_Scalar>::Transformation::RowsAtCompileTime ...>;
   using BegTra = composite::intseq_psum_t<LenTra>;
 
-  using LenRep = m_intseq<_T<_Scalar>::RepSize ...>;
+  using LenRep = intseq<_T<_Scalar>::RepSize ...>;
   using BegRep = composite::intseq_psum_t<LenRep>;
 
   template<size_t _Idx>
@@ -112,7 +112,7 @@ public:
 protected:
   // Helper for the parts constructor
   template<int ... _BegRep, int ... _LenRep>
-  Composite(m_intseq<_BegRep...>, m_intseq<_LenRep...>, _T<_Scalar> && ... parts);
+  Composite(intseq<_BegRep...>, intseq<_LenRep...>, _T<_Scalar> && ... parts);
 
 protected:
   DataType data_;
@@ -151,7 +151,7 @@ Composite<_Scalar, _T...>::Composite(_T<_Scalar> && ... parts)
 template<typename _Scalar, template<typename> class ... _T>
 template<int ... _BegRep, int ... _LenRep>
 Composite<_Scalar, _T...>::Composite(
-  m_intseq<_BegRep...>, m_intseq<_LenRep...>, _T<_Scalar> && ... parts)
+  intseq<_BegRep...>, intseq<_LenRep...>, _T<_Scalar> && ... parts)
 {
   // c++11 "fold expression"
   auto l = {((data_.template segment<_LenRep>(_BegRep) =

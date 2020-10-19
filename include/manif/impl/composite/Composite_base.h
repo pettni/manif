@@ -80,9 +80,10 @@ public:
    * @note See Eq. (190).
    */
   template<typename _DerivedOther>
-  LieGroup compose(const LieGroupBase<_DerivedOther> & m,
-                   OptJacobianRef J_mc_ma = {},
-                   OptJacobianRef J_mc_mb = {}) const;
+  LieGroup compose(
+    const LieGroupBase<_DerivedOther> & m,
+    OptJacobianRef J_mc_ma = {},
+    OptJacobianRef J_mc_mb = {}) const;
 
   /**
    * @brief Composite group action
@@ -119,46 +120,34 @@ public:
 
 protected:
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
-  LieGroup inverse_impl(OptJacobianRef, m_intseq<_Idx...>,
-    m_intseq<_BegDoF...>,
-    m_intseq<_LenDoF...>) const;
+  LieGroup
+    inverse_impl(OptJacobianRef, intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
-  Tangent log_impl(OptJacobianRef, m_intseq<_Idx...>,
-    m_intseq<_BegDoF...>,
-    m_intseq<_LenDoF...>) const;
+  Tangent
+    log_impl(OptJacobianRef, intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<typename _DerivedOther, int ... _Idx, int ... _BegDoF, int ... _LenDoF>
-  LieGroup compose_impl(
+  LieGroup
+  compose_impl(
     const LieGroupBase<_DerivedOther> & m,
-    OptJacobianRef J_mc_ma,
-    OptJacobianRef J_mc_mb,
-    m_intseq<_Idx...>,
-    m_intseq<_BegDoF...>,
-    m_intseq<_LenDoF...>) const;
+    OptJacobianRef J_mc_ma, OptJacobianRef J_mc_mb,
+    intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegDim, int ... _LenDim, int ... _BegDoF, int ... _LenDoF>
   Vector act_impl(
     const Vector & v,
     tl::optional<Eigen::Ref<Eigen::Matrix<Scalar, Dim, DoF>>> J_vout_m,
     tl::optional<Eigen::Ref<Eigen::Matrix<Scalar, Dim, Dim>>> J_vout_v,
-    m_intseq<_Idx...>,
-    m_intseq<_BegDim...>,
-    m_intseq<_LenDim...>,
-    m_intseq<_BegDoF...>,
-    m_intseq<_LenDoF...>) const;
+    intseq<_Idx...>, intseq<_BegDim...>, intseq<_LenDim...>,
+    intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
-  Jacobian adj_impl(
-    m_intseq<_Idx...>,
-    m_intseq<_BegDoF...>,
-    m_intseq<_LenDoF...>) const;
+  Jacobian adj_impl(intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegTra, int ... _LenTra>
-  Transformation transform_impl(
-    m_intseq<_Idx...>,
-    m_intseq<_BegTra...>,
-    m_intseq<_LenTra...>) const;
+  Transformation
+  transform_impl(intseq<_Idx...>, intseq<_BegTra...>, intseq<_LenTra...>) const;
 
   friend internal::RandomEvaluatorImpl<CompositeBase<_Derived>>;
 };
@@ -175,7 +164,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegTra, int ... _LenTra>
 typename CompositeBase<_Derived>::Transformation
 CompositeBase<_Derived>::transform_impl(
-  m_intseq<_Idx...>, m_intseq<_BegTra...>, m_intseq<_LenTra...>) const
+  intseq<_Idx...>, intseq<_BegTra...>, intseq<_LenTra...>) const
 {
   Transformation ret = Transformation::Zero();
   // cxx11 "fold expression"
@@ -199,7 +188,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeBase<_Derived>::LieGroup
 CompositeBase<_Derived>::inverse_impl(
-  OptJacobianRef J_minv_m, m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  OptJacobianRef J_minv_m, intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   if (J_minv_m) {
     return LieGroup(
@@ -223,7 +212,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeBase<_Derived>::Tangent
 CompositeBase<_Derived>::log_impl(
-  OptJacobianRef J_minv_m, m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  OptJacobianRef J_minv_m, intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   if (J_minv_m) {
     return Tangent(
@@ -260,7 +249,7 @@ template<typename _DerivedOther, int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeBase<_Derived>::LieGroup
 CompositeBase<_Derived>::compose_impl(
   const LieGroupBase<_DerivedOther> & m, OptJacobianRef J_mc_ma, OptJacobianRef J_mc_mb,
-  m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   return LieGroup(
     get<_Idx>().compose(
@@ -299,8 +288,8 @@ CompositeBase<_Derived>::act_impl(
   const typename CompositeBase<_Derived>::Vector & v,
   tl::optional<Eigen::Ref<Eigen::Matrix<Scalar, Dim, DoF>>> J_vout_m,
   tl::optional<Eigen::Ref<Eigen::Matrix<Scalar, Dim, Dim>>> J_vout_v,
-  m_intseq<_Idx...>, m_intseq<_BegDim...>, m_intseq<_LenDim...>,
-  m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDim...>, intseq<_LenDim...>,
+  intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   Vector ret;
   // cxx11 "fold expression"
@@ -328,7 +317,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeBase<_Derived>::Jacobian
 CompositeBase<_Derived>::adj_impl(
-  m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   Jacobian adj = Jacobian::Zero();
   // cxx11 "fold expression"
@@ -370,7 +359,7 @@ struct RandomEvaluatorImpl<CompositeBase<Derived>>
   }
 
   template<int ... _Idx>
-  static void run(CompositeBase<Derived> & m, m_intseq<_Idx...>)
+  static void run(CompositeBase<Derived> & m, intseq<_Idx...>)
   {
     m = typename CompositeBase<Derived>::LieGroup(
       CompositeBase<Derived>::template PartType<_Idx>::Random() ...);

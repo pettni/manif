@@ -103,31 +103,31 @@ public:
 protected:
   template<int ... _Idx, int ... _BegAlg, int ... _LenAlg>
   LieAlg
-  hat_impl(m_intseq<_Idx...>, m_intseq<_BegAlg...>, m_intseq<_LenAlg...>) const;
+  hat_impl(intseq<_Idx...>, intseq<_BegAlg...>, intseq<_LenAlg...>) const;
 
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
-  LieGroup exp_impl(
-    OptJacobianRef J_m_t, m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const;
-
-  template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
-  Jacobian
-  rjac_impl(m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const;
+  LieGroup
+  exp_impl(OptJacobianRef J_m_t, intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
   Jacobian
-  ljac_impl(m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const;
+  rjac_impl(intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
   Jacobian
-  rjacinv_impl(m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const;
+  ljac_impl(intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
   Jacobian
-  ljacinv_impl(m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const;
+  rjacinv_impl(intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
   Jacobian
-  smallAdj_impl(m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const;
+  ljacinv_impl(intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
+
+  template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
+  Jacobian
+  smallAdj_impl(intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const;
 
   friend internal::GeneratorEvaluator<CompositeTangentBase<_Derived>>;
   friend internal::RandomEvaluatorImpl<CompositeTangentBase<_Derived>>;
@@ -147,7 +147,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegAlg, int ... _LenAlg>
 typename CompositeTangentBase<_Derived>::LieAlg
 CompositeTangentBase<_Derived>::hat_impl(
-  m_intseq<_Idx...>, m_intseq<_BegAlg...>, m_intseq<_LenAlg...>) const
+  intseq<_Idx...>, intseq<_BegAlg...>, intseq<_LenAlg...>) const
 {
   LieAlg ret = LieAlg::Zero();
   // c++11 "fold expression"
@@ -170,8 +170,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeTangentBase<_Derived>::LieGroup
 CompositeTangentBase<_Derived>::exp_impl(
-  OptJacobianRef J_m_t, m_intseq<_Idx...>,
-  m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  OptJacobianRef J_m_t, intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   if (J_m_t) {
     return LieGroup(get<_Idx>().exp(J_m_t->template block<_LenDoF, _LenDoF>(_BegDoF, _BegDoF)) ...);
@@ -225,7 +224,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeTangentBase<_Derived>::Jacobian
 CompositeTangentBase<_Derived>::rjac_impl(
-  m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   Jacobian Jr = Jacobian::Zero();
   // c++11 "fold expression"
@@ -238,7 +237,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeTangentBase<_Derived>::Jacobian
 CompositeTangentBase<_Derived>::ljac_impl(
-  m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   Jacobian Jr = Jacobian::Zero();
   // c++11 "fold expression"
@@ -251,7 +250,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeTangentBase<_Derived>::Jacobian
 CompositeTangentBase<_Derived>::rjacinv_impl(
-  m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   Jacobian Jr = Jacobian::Zero();
   // c++11 "fold expression"
@@ -266,7 +265,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeTangentBase<_Derived>::Jacobian
 CompositeTangentBase<_Derived>::ljacinv_impl(
-  m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   Jacobian Jr = Jacobian::Zero();
   // c++11 "fold expression"
@@ -281,7 +280,7 @@ template<typename _Derived>
 template<int ... _Idx, int ... _BegDoF, int ... _LenDoF>
 typename CompositeTangentBase<_Derived>::Jacobian
 CompositeTangentBase<_Derived>::smallAdj_impl(
-  m_intseq<_Idx...>, m_intseq<_BegDoF...>, m_intseq<_LenDoF...>) const
+  intseq<_Idx...>, intseq<_BegDoF...>, intseq<_LenDoF...>) const
 {
   Jacobian Jr = Jacobian::Zero();
   // c++11 "fold expression"
@@ -344,9 +343,9 @@ struct GeneratorEvaluator<CompositeTangentBase<Derived>>
   template<int ... _Idx, int ... _BegDoF, int ... _LenDoF, int ... _BegAlg, int ... _LenAlg>
   static typename CompositeTangentBase<Derived>::LieAlg
   run(
-    const unsigned int i, m_intseq<_Idx...>,
-    m_intseq<_BegDoF...>, m_intseq<_LenDoF...>,
-    m_intseq<_BegAlg...>, m_intseq<_LenAlg...>)
+    const unsigned int i, intseq<_Idx...>,
+    intseq<_BegDoF...>, intseq<_LenDoF...>,
+    intseq<_BegAlg...>, intseq<_LenAlg...>)
   {
     using LieAlg = typename CompositeTangentBase<Derived>::LieAlg;
     LieAlg Ei = LieAlg::Constant(0);
@@ -371,7 +370,7 @@ struct RandomEvaluatorImpl<CompositeTangentBase<Derived>>
   }
 
   template<int ... _Idx>
-  static void run(CompositeTangentBase<Derived> & m, m_intseq<_Idx...>)
+  static void run(CompositeTangentBase<Derived> & m, intseq<_Idx...>)
   {
     m = typename CompositeTangentBase<Derived>::Tangent(
       CompositeTangentBase<Derived>::template PartType<_Idx>::Random() ...);

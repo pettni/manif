@@ -16,18 +16,18 @@ template<typename _Scalar, template<typename> class ... _T>
 struct traits<CompositeTangent<_Scalar, _T...>>
 {
   // Composite-specific traits
-  using IdxList = m_make_intseq<sizeof...(_T)>;
+  using IdxList = make_intseq_t<sizeof...(_T)>;
 
-  using LenDim = m_intseq<_T<_Scalar>::Tangent::Dim ...>;
+  using LenDim = intseq<_T<_Scalar>::Tangent::Dim ...>;
   using BegDim = composite::intseq_psum_t<LenDim>;
 
-  using LenDoF = m_intseq<_T<_Scalar>::Tangent::DoF ...>;
+  using LenDoF = intseq<_T<_Scalar>::Tangent::DoF ...>;
   using BegDoF = composite::intseq_psum_t<LenDoF>;
 
-  using LenRep = m_intseq<_T<_Scalar>::Tangent::RepSize ...>;
+  using LenRep = intseq<_T<_Scalar>::Tangent::RepSize ...>;
   using BegRep = composite::intseq_psum_t<LenRep>;
 
-  using LenAlg = m_intseq<_T<_Scalar>::Tangent::LieAlg::RowsAtCompileTime ...>;
+  using LenAlg = intseq<_T<_Scalar>::Tangent::LieAlg::RowsAtCompileTime ...>;
   using BegAlg = composite::intseq_psum_t<LenAlg>;
 
   template<size_t Idx>
@@ -114,7 +114,8 @@ protected:
   // Helper for the parts constructor
   template<int ... _BegRep, int ... _LenRep>
   CompositeTangent(
-    m_intseq<_BegRep...>, m_intseq<_LenRep...>, typename _T<_Scalar>::Tangent && ... parts);
+    intseq<_BegRep...>, intseq<_LenRep...>,
+    typename _T<_Scalar>::Tangent && ... parts);
 
 protected:
   DataType data_;
@@ -153,7 +154,7 @@ CompositeTangent<_Scalar, _T...>::CompositeTangent(typename _T<_Scalar>::Tangent
 template<typename _Scalar, template<typename> class ... _T>
 template<int ... _BegRep, int ... _LenRep>
 CompositeTangent<_Scalar, _T...>::CompositeTangent(
-  m_intseq<_BegRep...>, m_intseq<_LenRep...>,
+  intseq<_BegRep...>, intseq<_LenRep...>,
   typename _T<_Scalar>::Tangent && ... parts)
 {
   // c++11 "fold expression"
