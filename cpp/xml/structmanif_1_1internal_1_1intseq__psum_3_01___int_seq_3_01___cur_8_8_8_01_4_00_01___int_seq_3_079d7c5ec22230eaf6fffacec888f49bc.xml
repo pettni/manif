@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmanif_1_1internal_1_1intseq__psum_3_01___int_seq_3_01___cur_8_8_8_01_4_00_01___int_seq_3_079d7c5ec22230eaf6fffacec888f49bc" kind="struct" language="C++" prot="public">
+    <compoundname>manif::internal::intseq_psum&lt; _IntSeq&lt; _Cur... &gt;, _IntSeq&lt; _First, _Rem... &gt;, _Sum &gt;</compoundname>
+    <basecompoundref refid="structmanif_1_1internal_1_1intseq__psum" prot="public" virt="non-virtual">manif::internal::intseq_psum&lt; _IntSeq&lt; _Cur..., _Sum &gt;, _IntSeq&lt; _Rem... &gt;, _Sum+_First &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>template&lt; int ... &gt; class</type>
+        <declname>_IntSeq</declname>
+        <defname>_IntSeq</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>_First</declname>
+        <defname>_First</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>_Sum</declname>
+        <defname>_Sum</defname>
+      </param>
+      <param>
+        <type>int...</type>
+        <declname>_Cur</declname>
+        <defname>_Cur</defname>
+      </param>
+      <param>
+        <type>int...</type>
+        <declname>_Rem</declname>
+        <defname>_Rem</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>manif::internal::intseq_psum&lt; _IntSeq&lt; _Cur... &gt;, _IntSeq&lt; _First, _Rem... &gt;, _Sum &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__psum_3_01___int_seq_3_01___cur_8_8_8_01_4_00_01___int_seq_3_079d7c5ec22230eaf6fffacec888f49bc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::internal::intseq_psum&lt; _IntSeq&lt; _Cur..., _Sum &gt;, _IntSeq&lt; _Rem... &gt;, _Sum+_First &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__psum"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>manif::internal::intseq_psum&lt; _IntSeq&lt; _Cur... &gt;, _IntSeq&lt; _First, _Rem... &gt;, _Sum &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__psum_3_01___int_seq_3_01___cur_8_8_8_01_4_00_01___int_seq_3_079d7c5ec22230eaf6fffacec888f49bc"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::internal::intseq_psum&lt; _IntSeq&lt; _Cur..., _Sum &gt;, _IntSeq&lt; _Rem... &gt;, _Sum+_First &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__psum"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/manif/manif/include/manif/impl/traits.h" line="169" column="1" bodyfile="/home/runner/work/manif/manif/include/manif/impl/traits.h" bodystart="171" bodyend="171"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

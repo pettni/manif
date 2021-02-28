@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmanif_1_1internal_1_1bundle__element_3_01_idx_00_01_head_00_01_tail_8_8_8_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>manif::internal::bundle_element&lt; Idx, Head, Tail... &gt;</compoundname>
+    <basecompoundref refid="structmanif_1_1internal_1_1bundle__element" prot="public" virt="non-virtual">manif::internal::bundle_element&lt; Idx-1, Tail... &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>Idx</declname>
+        <defname>Idx</defname>
+      </param>
+      <param>
+        <type>class Head</type>
+      </param>
+      <param>
+        <type>class...</type>
+        <declname>Tail</declname>
+        <defname>Tail</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>manif::internal::bundle_element&lt; Idx, Head, Tail... &gt;</label>
+        <link refid="structmanif_1_1internal_1_1bundle__element_3_01_idx_00_01_head_00_01_tail_8_8_8_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::internal::bundle_element&lt; Idx-1, Tail... &gt;</label>
+        <link refid="structmanif_1_1internal_1_1bundle__element"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>manif::internal::bundle_element&lt; Idx, Head, Tail... &gt;</label>
+        <link refid="structmanif_1_1internal_1_1bundle__element_3_01_idx_00_01_head_00_01_tail_8_8_8_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::internal::bundle_element&lt; Idx-1, Tail... &gt;</label>
+        <link refid="structmanif_1_1internal_1_1bundle__element"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/manif/manif/include/manif/impl/traits.h" line="187" column="1" bodyfile="/home/runner/work/manif/manif/include/manif/impl/traits.h" bodystart="188" bodyend="188"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

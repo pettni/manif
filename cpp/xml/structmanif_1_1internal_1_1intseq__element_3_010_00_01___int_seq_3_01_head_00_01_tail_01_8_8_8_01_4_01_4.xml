@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmanif_1_1internal_1_1intseq__element_3_010_00_01___int_seq_3_01_head_00_01_tail_01_8_8_8_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>manif::internal::intseq_element&lt; 0, _IntSeq&lt; Head, Tail ... &gt; &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>template&lt; int ... &gt; class</type>
+        <declname>_IntSeq</declname>
+        <defname>_IntSeq</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>Head</declname>
+        <defname>Head</defname>
+      </param>
+      <param>
+        <type>int ...</type>
+        <declname>Tail</declname>
+        <defname>Tail</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structmanif_1_1internal_1_1intseq__element_3_010_00_01___int_seq_3_01_head_00_01_tail_01_8_8_8_01_4_01_4_1acd682d52ce52bfa3619b94ff61692129" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int manif::internal::intseq_element&lt; 0, _IntSeq&lt; Head, Tail ... &gt; &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= Head</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/traits.h" line="135" column="24" bodyfile="/home/runner/work/manif/manif/include/manif/impl/traits.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/manif/manif/include/manif/impl/traits.h" line="133" column="1" bodyfile="/home/runner/work/manif/manif/include/manif/impl/traits.h" bodystart="134" bodyend="136"/>
+    <listofallmembers>
+      <member refid="structmanif_1_1internal_1_1intseq__element_3_010_00_01___int_seq_3_01_head_00_01_tail_01_8_8_8_01_4_01_4_1acd682d52ce52bfa3619b94ff61692129" prot="public" virt="non-virtual"><scope>manif::internal::intseq_element&lt; 0, _IntSeq&lt; Head, Tail ... &gt; &gt;</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

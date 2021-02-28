@@ -1,0 +1,879 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmanif_1_1_bundle_tangent_base" kind="struct" language="C++" prot="public">
+    <compoundname>manif::BundleTangentBase</compoundname>
+    <basecompoundref refid="structmanif_1_1_tangent_base" prot="public" virt="non-virtual">manif::TangentBase&lt; _Derived &gt;</basecompoundref>
+    <includes refid="_bundle_tangent__base_8h" local="no">BundleTangent_base.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename _Derived</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1a48dd943c49b6133a993374a2caa197c7" prot="private" static="no">
+        <type><ref refid="structmanif_1_1_tangent_base" kindref="compound">TangentBase</ref>&lt; _Derived &gt;</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::Base =  TangentBase&lt;_Derived&gt;</definition>
+        <argsstring></argsstring>
+        <name>Base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="19" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1afce62b8b640841d442e2247063ee24c7" prot="private" static="no">
+        <type><ref refid="structmanif_1_1_bundle_tangent_base" kindref="compound">BundleTangentBase</ref>&lt; _Derived &gt;</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::Type =  BundleTangentBase&lt;_Derived&gt;</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="20" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1ad7b5090678e761545c5763d89804d85e" prot="private" static="no">
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::IdxList</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::IdxList =  typename internal::traits&lt;_Derived&gt;::IdxList</definition>
+        <argsstring></argsstring>
+        <name>IdxList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="22" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1a4bf4c5150f5eed48e8b0932eacbd7256" prot="private" static="no">
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::BegAlg</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::BegAlg =  typename internal::traits&lt;_Derived&gt;::BegAlg</definition>
+        <argsstring></argsstring>
+        <name>BegAlg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="24" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1ac1025f038fa3416d87e4e21f5b575a88" prot="private" static="no">
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::LenAlg</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::LenAlg =  typename internal::traits&lt;_Derived&gt;::LenAlg</definition>
+        <argsstring></argsstring>
+        <name>LenAlg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="25" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1a6baf85c9b7a28ebafc9435023eab0b49" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+        </templateparamlist>
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::template ElementType&lt; _Idx &gt;</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::ElementType =  typename internal::traits&lt;_Derived&gt;::template ElementType&lt;_Idx&gt;</definition>
+        <argsstring></argsstring>
+        <name>ElementType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="28" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1a8ff1ca605535f9409bb6745bd73ef23e" prot="public" static="no">
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::BegDoF</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::BegDoF =  typename internal::traits&lt;_Derived&gt;::BegDoF</definition>
+        <argsstring></argsstring>
+        <name>BegDoF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="32" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1ab388ca95e3e5a17dd23f8484d3346946" prot="public" static="no">
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::LenDoF</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::LenDoF =  typename internal::traits&lt;_Derived&gt;::LenDoF</definition>
+        <argsstring></argsstring>
+        <name>LenDoF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="34" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1a85defd926b391fb1461dd7d4f0834644" prot="public" static="no">
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::BegRep</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::BegRep =  typename internal::traits&lt;_Derived&gt;::BegRep</definition>
+        <argsstring></argsstring>
+        <name>BegRep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="37" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structmanif_1_1_bundle_tangent_base_1ab6d6efb7ed5ba85d28eeced9b354e0e2" prot="public" static="no">
+        <type>typename <ref refid="structmanif_1_1internal_1_1traits" kindref="compound">internal::traits</ref>&lt; _Derived &gt;::LenRep</type>
+        <definition>using manif::BundleTangentBase&lt; _Derived &gt;::LenRep =  typename internal::traits&lt;_Derived&gt;::LenRep</definition>
+        <argsstring></argsstring>
+        <name>LenRep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="39" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structmanif_1_1_bundle_tangent_base_1af83be7f0f38ef8237055e5d74598ae95" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr std::size_t</type>
+        <definition>constexpr std::size_t manif::BundleTangentBase&lt; _Derived &gt;::BundleSize</definition>
+        <argsstring></argsstring>
+        <name>BundleSize</name>
+        <initializer>= IdxList::size()</initializer>
+        <briefdescription>
+<para>Number of elements in the <ref refid="structmanif_1_1_bundle_tangent" kindref="compound">BundleTangent</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="112" column="32" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1af02ece5c5786a54ed76000e15485d8b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>LieAlg</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::LieAlg manif::BundleTangentBase&lt; _Derived &gt;::hat</definition>
+        <argsstring>() const</argsstring>
+        <name>hat</name>
+        <briefdescription>
+<para>Hat operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An element of the Lie algebra. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="65" column="10" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a50c8a8e4babb10fbfbb3841ffec05ad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>LieGroup</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::LieGroup manif::BundleTangentBase&lt; _Derived &gt;::exp</definition>
+        <argsstring>(OptJacobianRef J_m_t={}) const</argsstring>
+        <name>exp</name>
+        <param>
+          <type>OptJacobianRef</type>
+          <declname>J_m_t</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Exponential operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>An element of the Lie Group. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="71" column="12" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="185" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a93ef414941fdf3bb956810a892427698" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>MANIF_DEPRECATED LieGroup</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::LieGroup manif::BundleTangentBase&lt; _Derived &gt;::retract</definition>
+        <argsstring>(OptJacobianRef J_m_t={}) const</argsstring>
+        <name>retract</name>
+        <param>
+          <type>OptJacobianRef</type>
+          <declname>J_m_t</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>This function is deprecated. Please considere using <ref refid="structmanif_1_1_bundle_tangent_base_1a50c8a8e4babb10fbfbb3841ffec05ad4" kindref="member">exp</ref> instead. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="79" column="12" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a354ad519f3b1c04a7bd3b3dd03813c56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::rjac</definition>
+        <argsstring>() const</argsstring>
+        <name>rjac</name>
+        <briefdescription>
+<para>Get the right Jacobian. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="84" column="12" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a2dc86098f19f067e324bd9b52b42b5bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::ljac</definition>
+        <argsstring>() const</argsstring>
+        <name>ljac</name>
+        <briefdescription>
+<para>Get the left Jacobian. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="89" column="12" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="221" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1ace0075a13d42b5dc8f4a9e410314a94f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::rjacinv</definition>
+        <argsstring>() const</argsstring>
+        <name>rjacinv</name>
+        <briefdescription>
+<para>Get the inverse of the right Jacobian. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="94" column="12" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="228" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a87722355d7504ab7c56038a56e965f7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::ljacinv</definition>
+        <argsstring>() const</argsstring>
+        <name>ljacinv</name>
+        <briefdescription>
+<para>Get the inverse of the left Jacobian. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="99" column="12" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="235" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1aea300564692738165bb99118de4361b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::smallAdj</definition>
+        <argsstring>() const</argsstring>
+        <name>smallAdj</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="104" column="12" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="242" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a98c069baf96b76e115a9ad45a7743eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+        </templateparamlist>
+        <type>Eigen::Map&lt; ElementType&lt; _Idx &gt; &gt;</type>
+        <definition>Eigen::Map&lt;ElementType&lt;_Idx&gt; &gt; manif::BundleTangentBase&lt; _Derived &gt;::element</definition>
+        <argsstring>()</argsstring>
+        <name>element</name>
+        <briefdescription>
+<para>Access <ref refid="structmanif_1_1_bundle_tangent" kindref="compound">BundleTangent</ref> element as Map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>_Idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="119" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1ad275dbef91fb66f781de5e85e6a1e072" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+        </templateparamlist>
+        <type>Eigen::Map&lt; const ElementType&lt; _Idx &gt; &gt;</type>
+        <definition>Eigen::Map&lt;const ElementType&lt;_Idx&gt; &gt; manif::BundleTangentBase&lt; _Derived &gt;::element</definition>
+        <argsstring>() const</argsstring>
+        <name>element</name>
+        <briefdescription>
+<para>Access <ref refid="structmanif_1_1_bundle_tangent" kindref="compound">BundleTangent</ref> element as Map to const. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>_Idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>element index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="126" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a546f4e877a5222c339a7ffc498dfe1e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+        </templateparamlist>
+        <type>Eigen::Map&lt; typename <ref refid="structmanif_1_1_bundle_tangent_base" kindref="compound">BundleTangentBase</ref>&lt; _Derived &gt;::template ElementType&lt; _Idx &gt; &gt;</type>
+        <definition>Eigen::Map&lt;typename BundleTangentBase&lt;_Derived&gt;::template ElementType&lt;_Idx&gt; &gt; manif::BundleTangentBase&lt; _Derived &gt;::element</definition>
+        <argsstring>()</argsstring>
+        <name>element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="321" column="19" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="321" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1ab8d334622313d94a8ae2b657036f7887" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+        </templateparamlist>
+        <type>Eigen::Map&lt; const typename <ref refid="structmanif_1_1_bundle_tangent_base" kindref="compound">BundleTangentBase</ref>&lt; _Derived &gt;::template ElementType&lt; _Idx &gt; &gt;</type>
+        <definition>Eigen::Map&lt;const typename BundleTangentBase&lt;_Derived&gt;::template ElementType&lt;_Idx&gt; &gt; manif::BundleTangentBase&lt; _Derived &gt;::element</definition>
+        <argsstring>() const</argsstring>
+        <name>element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="331" column="19" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="331" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a6004be883d35b1e2a1ac04efd63c7443" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Scalar *</type>
+        <definition>TangentBase&lt; _Derived &gt;::Scalar * manif::TangentBase&lt; _Derived &gt;::data</definition>
+        <argsstring>()</argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>Access the underlying data by pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="46" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/tangent_base.h" bodystart="391" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a56bf87afd42cd3c795d1a2878ca99010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const Scalar *</type>
+        <definition>const TangentBase&lt; _Derived &gt;::Scalar * manif::TangentBase&lt; _Derived &gt;::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>Access the underlying data by const pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="46" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/tangent_base.h" bodystart="398" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a573f842dc25ee3125f8959ccdacb5240" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DataType &amp;</type>
+        <definition>TangentBase&lt; _Derived &gt;::DataType &amp; manif::TangentBase&lt; _Derived &gt;::coeffs</definition>
+        <argsstring>()</argsstring>
+        <name>coeffs</name>
+        <briefdescription>
+<para>Access the underlying data by reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="47" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/tangent_base.h" bodystart="377" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a2e28e350e07e2ec1d2a164bd39d3370a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const DataType &amp;</type>
+        <definition>const TangentBase&lt; _Derived &gt;::DataType &amp; manif::TangentBase&lt; _Derived &gt;::coeffs</definition>
+        <argsstring>() const</argsstring>
+        <name>coeffs</name>
+        <briefdescription>
+<para>Access the underlying data by const reference. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="47" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/tangent_base.h" bodystart="384" bodyend="387"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a96044f0d702f6df0abaee00a7d6c1e2c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int ...</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_BegAlg</declname>
+            <defname>_BegAlg</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_LenAlg</declname>
+            <defname>_LenAlg</defname>
+          </param>
+        </templateparamlist>
+        <type>LieAlg</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::LieAlg manif::BundleTangentBase&lt; _Derived &gt;::hat_impl</definition>
+        <argsstring>(intseq&lt; _Idx... &gt;, intseq&lt; _BegAlg... &gt;, intseq&lt; _LenAlg... &gt;) const</argsstring>
+        <name>hat_impl</name>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _Idx... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _BegAlg... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _LenAlg... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="132" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="173" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a11ea2b809f756fcadcbad829eafa57d5" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int ...</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_BegDoF</declname>
+            <defname>_BegDoF</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_LenDoF</declname>
+            <defname>_LenDoF</defname>
+          </param>
+        </templateparamlist>
+        <type>LieGroup</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::LieGroup manif::BundleTangentBase&lt; _Derived &gt;::exp_impl</definition>
+        <argsstring>(OptJacobianRef J_m_t, intseq&lt; _Idx... &gt;, intseq&lt; _BegDoF... &gt;, intseq&lt; _LenDoF... &gt;) const</argsstring>
+        <name>exp_impl</name>
+        <param>
+          <type>OptJacobianRef</type>
+          <declname>J_m_t</declname>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _Idx... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _BegDoF... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _LenDoF... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="136" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="196" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a48266264ae99629628fcf24dfcfe6f48" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int ...</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_BegDoF</declname>
+            <defname>_BegDoF</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_LenDoF</declname>
+            <defname>_LenDoF</defname>
+          </param>
+        </templateparamlist>
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::rjac_impl</definition>
+        <argsstring>(intseq&lt; _Idx... &gt;, intseq&lt; _BegDoF... &gt;, intseq&lt; _LenDoF... &gt;) const</argsstring>
+        <name>rjac_impl</name>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _Idx... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _BegDoF... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _LenDoF... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="140" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="250" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1abd59cf0bf214ae5bf8418150def8b6cb" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int ...</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_BegDoF</declname>
+            <defname>_BegDoF</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_LenDoF</declname>
+            <defname>_LenDoF</defname>
+          </param>
+        </templateparamlist>
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::ljac_impl</definition>
+        <argsstring>(intseq&lt; _Idx... &gt;, intseq&lt; _BegDoF... &gt;, intseq&lt; _LenDoF... &gt;) const</argsstring>
+        <name>ljac_impl</name>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _Idx... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _BegDoF... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _LenDoF... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="144" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="263" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1ad4fc21ab9fa329f3f7d21564a6e2c8a8" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int ...</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_BegDoF</declname>
+            <defname>_BegDoF</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_LenDoF</declname>
+            <defname>_LenDoF</defname>
+          </param>
+        </templateparamlist>
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::rjacinv_impl</definition>
+        <argsstring>(intseq&lt; _Idx... &gt;, intseq&lt; _BegDoF... &gt;, intseq&lt; _LenDoF... &gt;) const</argsstring>
+        <name>rjacinv_impl</name>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _Idx... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _BegDoF... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _LenDoF... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="148" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="276" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a1dde52de85dafcfb8582c6239de7077a" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int ...</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_BegDoF</declname>
+            <defname>_BegDoF</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_LenDoF</declname>
+            <defname>_LenDoF</defname>
+          </param>
+        </templateparamlist>
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::ljacinv_impl</definition>
+        <argsstring>(intseq&lt; _Idx... &gt;, intseq&lt; _BegDoF... &gt;, intseq&lt; _LenDoF... &gt;) const</argsstring>
+        <name>ljacinv_impl</name>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _Idx... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _BegDoF... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _LenDoF... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="152" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="291" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1af9f40e1a0b39e53da8a1295c985dc311" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>int ...</type>
+            <declname>_Idx</declname>
+            <defname>_Idx</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_BegDoF</declname>
+            <defname>_BegDoF</defname>
+          </param>
+          <param>
+            <type>int ...</type>
+            <declname>_LenDoF</declname>
+            <defname>_LenDoF</defname>
+          </param>
+        </templateparamlist>
+        <type>Jacobian</type>
+        <definition>BundleTangentBase&lt; _Derived &gt;::Jacobian manif::BundleTangentBase&lt; _Derived &gt;::smallAdj_impl</definition>
+        <argsstring>(intseq&lt; _Idx... &gt;, intseq&lt; _BegDoF... &gt;, intseq&lt; _LenDoF... &gt;) const</argsstring>
+        <name>smallAdj_impl</name>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _Idx... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _BegDoF... &gt;</type>
+        </param>
+        <param>
+          <type><ref refid="structmanif_1_1internal_1_1intseq" kindref="compound">intseq</ref>&lt; _LenDoF... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="156" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="306" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1a18e1a216f401f804a09047242bf987a7" prot="protected" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>_Derived &amp;</type>
+        <definition>_Derived&amp; manif::TangentBase&lt; _Derived &gt;::derived</definition>
+        <argsstring>() &amp;noexcept</argsstring>
+        <name>derived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="51" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/tangent_base.h" bodystart="336" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="structmanif_1_1_bundle_tangent_base_1aa2305ee8102e265616aa35416179b377" prot="protected" static="no" const="no" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const _Derived &amp;</type>
+        <definition>const _Derived&amp; manif::TangentBase&lt; _Derived &gt;::derived</definition>
+        <argsstring>() const &amp;noexcept</argsstring>
+        <name>derived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="51" column="3" bodyfile="/home/runner/work/manif/manif/include/manif/impl/tangent_base.h" bodystart="337" bodyend="337"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The base class of the <ref refid="structmanif_1_1_bundle" kindref="compound">Bundle</ref> tangent. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>manif::BundleTangentBase&lt; _Derived &gt;</label>
+        <link refid="structmanif_1_1_bundle_tangent_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::TangentBase&lt; _Derived &gt;</label>
+        <link refid="structmanif_1_1_tangent_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>manif::BundleTangentBase&lt; _Derived &gt;</label>
+        <link refid="structmanif_1_1_bundle_tangent_base"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::TangentBase&lt; _Derived &gt;</label>
+        <link refid="structmanif_1_1_tangent_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" line="15" column="1" bodyfile="/home/runner/work/manif/manif/include/manif/impl/bundle/BundleTangent_base.h" bodystart="16" bodyend="160"/>
+    <listofallmembers>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a48dd943c49b6133a993374a2caa197c7" prot="private" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Base</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a4bf4c5150f5eed48e8b0932eacbd7256" prot="private" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>BegAlg</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a8ff1ca605535f9409bb6745bd73ef23e" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>BegDoF</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a85defd926b391fb1461dd7d4f0834644" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>BegRep</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1af83be7f0f38ef8237055e5d74598ae95" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>BundleSize</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a9c4d27fc308816b507af1734a42c01c1" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>cast</name></member>
+      <member refid="structmanif_1_1_tangent_base_1aaef816e134cd084829636a27a71b7aae" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>cast</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a573f842dc25ee3125f8959ccdacb5240" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>coeffs</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a2e28e350e07e2ec1d2a164bd39d3370a" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>coeffs</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a2e28e350e07e2ec1d2a164bd39d3370a" prot="public" virt="non-virtual" ambiguityscope="manif::TangentBase::"><scope>manif::BundleTangentBase</scope><name>coeffs</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a6004be883d35b1e2a1ac04efd63c7443" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>data</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a56bf87afd42cd3c795d1a2878ca99010" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>data</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a56bf87afd42cd3c795d1a2878ca99010" prot="public" virt="non-virtual" ambiguityscope="manif::TangentBase::"><scope>manif::BundleTangentBase</scope><name>data</name></member>
+      <member refid="structmanif_1_1_tangent_base_1adf320fca86420a44f1e80cf003800dfb" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>DataType</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a18e1a216f401f804a09047242bf987a7" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>derived</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1aa2305ee8102e265616aa35416179b377" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>derived</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a18e1a216f401f804a09047242bf987a7" prot="protected" virt="non-virtual" ambiguityscope="manif::TangentBase::"><scope>manif::BundleTangentBase</scope><name>derived</name></member>
+      <member refid="structmanif_1_1_tangent_base_1aa2305ee8102e265616aa35416179b377" prot="protected" virt="non-virtual" ambiguityscope="manif::TangentBase::"><scope>manif::BundleTangentBase</scope><name>derived</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a6c72f3d4af207ef853df0387a31a8334" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Dim</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a10a74cacca2371dfe8260727bd9bdf37" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>DoF</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a98c069baf96b76e115a9ad45a7743eaf" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>element</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ad275dbef91fb66f781de5e85e6a1e072" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>element</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a546f4e877a5222c339a7ffc498dfe1e2" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>element</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ab8d334622313d94a8ae2b657036f7887" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>element</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a6baf85c9b7a28ebafc9435023eab0b49" prot="private" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>ElementType</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a50c8a8e4babb10fbfbb3841ffec05ad4" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>exp</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a11ea2b809f756fcadcbad829eafa57d5" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>exp_impl</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a2dbd4f126e05b21b0adee045844579a4" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>generator</name></member>
+      <member refid="structmanif_1_1_tangent_base_1acce070bec9a040c8a3195168756f9b99" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Generator</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1af02ece5c5786a54ed76000e15485d8b9" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>hat</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a96044f0d702f6df0abaee00a7d6c1e2c" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>hat_impl</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ad7b5090678e761545c5763d89804d85e" prot="private" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>IdxList</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a83d40f212a18ed4c9b28e56ca4f5704c" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>inner</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a7f05a48c9ffd4d5f582f0062c8bf9f55" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>innerWeights</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a0a29f4a104f11fd83823fcafa1e6b2c9" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>InnerWeights</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a151e1d9be260ac7bab172b950017a57c" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>InnerWeightsMatrix</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a09d1ca10487c6c7cc43ff456a1664b65" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>isApprox</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a11263b30dc75dbdf769c86a26001c320" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>isApprox</name></member>
+      <member refid="structmanif_1_1_tangent_base_1ab8e7408713b9750c12418ae9ba9dbd90" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Jacobian</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ac1025f038fa3416d87e4e21f5b575a88" prot="private" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>LenAlg</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ab388ca95e3e5a17dd23f8484d3346946" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>LenDoF</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ab6d6efb7ed5ba85d28eeced9b354e0e2" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>LenRep</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a8baef49ae68f130cda30e49f6f402999" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>LieAlg</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a2662a9b7a2dc0d5b1d34e1517e258300" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>LieGroup</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a2dc86098f19f067e324bd9b52b42b5bd" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>ljac</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1abd59cf0bf214ae5bf8418150def8b6cb" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>ljac_impl</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a87722355d7504ab7c56038a56e965f7b" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>ljacinv</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a1dde52de85dafcfb8582c6239de7077a" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>ljacinv_impl</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a375b870e90fabfce45b5a74c46c54b62" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>lplus</name></member>
+      <member refid="structmanif_1_1_tangent_base_1acc8d41b513681114f8091f53d81626a1" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>minus</name></member>
+      <member refid="structmanif_1_1_tangent_base_1aeec01529723a9090073be80e6e3983a2" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator*=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1afc150adf396c8432ce0ba909571bd70c" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator+</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a6be164dc3b9118f3bfebd7f59b4a7a38" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator+=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a1271777d229f54a5dd0f0f12d45f043f" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator+=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a35e627252748a0268c6ee908d2d09b12" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator-</name></member>
+      <member refid="structmanif_1_1_tangent_base_1afc51a6333c409460fc017b2303cd2484" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator-=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a3fa85584b927625ddeb8f482008623c6" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator-=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1ab59f8be2812f60af208fcbb2e3683699" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator/=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a4d991baead4165a238e5a76fd7c57db8" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator&lt;&lt;</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a414b302f5e268f819a0e992f18dd682d" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a2703d13faf7a912f8078129b2a4e66c6" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1ab8fc7edb0d20e2ecda82fd6d536cb425" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>operator=</name></member>
+      <member refid="structmanif_1_1_tangent_base_1ab26fdad01bd80b6c628465f4b82a0411" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>OptJacobianRef</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a08bbcf10f4f7ed8210566e3a12556c8a" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>plus</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a606e1b9c212b8320f65378437d302c0b" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>plus</name></member>
+      <member refid="structmanif_1_1_tangent_base_1abdc6586b6f1bc615dc252df10a0e4f2a" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Random</name></member>
+      <member refid="structmanif_1_1_tangent_base_1abc26abf20f27e8ba2353557c565c04fd" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>RepSize</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a93ef414941fdf3bb956810a892427698" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>retract</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a354ad519f3b1c04a7bd3b3dd03813c56" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>rjac</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1a48266264ae99629628fcf24dfcfe6f48" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>rjac_impl</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ace0075a13d42b5dc8f4a9e410314a94f" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>rjacinv</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1ad4fc21ab9fa329f3f7d21564a6e2c8a8" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>rjacinv_impl</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a4533ec7b13c30b5ec8fb1d5c84039502" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>rplus</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a5e950e12d3b90e86b9e8d1c88ae44d3c" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Scalar</name></member>
+      <member refid="structmanif_1_1_tangent_base_1af7bd211079a17ccc135877c1d96aaeed" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>setRandom</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a04926ad935d5d3504cb69123128b5022" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>setZero</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1aea300564692738165bb99118de4361b0" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>smallAdj</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1af9f40e1a0b39e53da8a1295c985dc311" prot="protected" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>smallAdj_impl</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a7439ba89e703a34202391e2a6a9aeda1" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>squaredWeightedNorm</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a28e3e53e1c1c91f29a8417e7e3a3a654" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Tangent</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a0c8b928c0e5710577fe171046920411c" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>TangentTemplate</name></member>
+      <member refid="structmanif_1_1_bundle_tangent_base_1afce62b8b640841d442e2247063ee24c7" prot="private" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Type</name></member>
+      <member refid="structmanif_1_1_tangent_base_1aebc062717b43ce0d4f623191b3a4e626" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>weightedNorm</name></member>
+      <member refid="structmanif_1_1_tangent_base_1a69d9ad80a547f43f038ee3f60df21ba8" prot="public" virt="non-virtual"><scope>manif::BundleTangentBase</scope><name>Zero</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmanif_1_1internal_1_1intseq__element_3_01___idx_00_01___int_seq_3_01_head_00_01_tail_8_8_8_01_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>manif::internal::intseq_element&lt; _Idx, _IntSeq&lt; Head, Tail... &gt; &gt;</compoundname>
+    <basecompoundref refid="structmanif_1_1internal_1_1intseq__element" prot="public" virt="non-virtual">manif::internal::intseq_element&lt; _Idx - 1, _IntSeq&lt; Tail... &gt; &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>std::size_t</type>
+        <declname>_Idx</declname>
+        <defname>_Idx</defname>
+      </param>
+      <param>
+        <type>template&lt; int ... &gt; class</type>
+        <declname>_IntSeq</declname>
+        <defname>_IntSeq</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>Head</declname>
+        <defname>Head</defname>
+      </param>
+      <param>
+        <type>int ...</type>
+        <declname>Tail</declname>
+        <defname>Tail</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>manif::internal::intseq_element&lt; _Idx, _IntSeq&lt; Head, Tail... &gt; &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__element_3_01___idx_00_01___int_seq_3_01_head_00_01_tail_8_8_8_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::internal::intseq_element&lt; _Idx - 1, _IntSeq&lt; Tail... &gt; &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__element"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>manif::internal::intseq_element&lt; _Idx, _IntSeq&lt; Head, Tail... &gt; &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__element_3_01___idx_00_01___int_seq_3_01_head_00_01_tail_8_8_8_01_4_01_4"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>manif::internal::intseq_element&lt; _Idx - 1, _IntSeq&lt; Tail... &gt; &gt;</label>
+        <link refid="structmanif_1_1internal_1_1intseq__element"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/manif/manif/include/manif/impl/traits.h" line="128" column="1" bodyfile="/home/runner/work/manif/manif/include/manif/impl/traits.h" bodystart="130" bodyend="130"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

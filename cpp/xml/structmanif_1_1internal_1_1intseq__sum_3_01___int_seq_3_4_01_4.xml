@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmanif_1_1internal_1_1intseq__sum_3_01___int_seq_3_4_01_4" kind="struct" language="C++" prot="public">
+    <compoundname>manif::internal::intseq_sum&lt; _IntSeq&lt;&gt; &gt;</compoundname>
+    <templateparamlist>
+      <param>
+        <type>template&lt; int ... &gt; class</type>
+        <declname>_IntSeq</declname>
+        <defname>_IntSeq</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structmanif_1_1internal_1_1intseq__sum_3_01___int_seq_3_4_01_4_1a6fed76a65d8e023f9f6b5121ac79753c" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int manif::internal::intseq_sum&lt; _IntSeq&lt;&gt; &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/manif/manif/include/manif/impl/traits.h" line="153" column="24" bodyfile="/home/runner/work/manif/manif/include/manif/impl/traits.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/manif/manif/include/manif/impl/traits.h" line="151" column="1" bodyfile="/home/runner/work/manif/manif/include/manif/impl/traits.h" bodystart="152" bodyend="154"/>
+    <listofallmembers>
+      <member refid="structmanif_1_1internal_1_1intseq__sum_3_01___int_seq_3_4_01_4_1a6fed76a65d8e023f9f6b5121ac79753c" prot="public" virt="non-virtual"><scope>manif::internal::intseq_sum&lt; _IntSeq&lt;&gt; &gt;</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
